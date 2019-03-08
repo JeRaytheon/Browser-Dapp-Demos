@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'demo',
+    title: 'nem钱包',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -17,7 +17,7 @@ module.exports = {
   ** CSS of the page
   */
   css: [
-
+    'element-ui/lib/theme-chalk/index.css'
   ],
   /*
   ** Customize the progress bar color
@@ -50,6 +50,7 @@ module.exports = {
       'rxjs/operators',
       'js-joda',
       'js-sha3',
+      'element-ui'
     ],
   },
   mode: 'spa',
@@ -64,8 +65,10 @@ module.exports = {
       error: '#b71c1c'
     }
   },
-  plugins: [
-
+  plugins: [{
+    src: '~plugins/ElementUI',
+    ssr: true,
+  }
   ],
 }
 

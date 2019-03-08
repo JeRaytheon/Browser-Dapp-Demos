@@ -107,6 +107,14 @@
         this.privateKey = "";
         const endpoint = this.endpoint || this.userEndpoint;
         this.$emit("walletCreated", {wallet, password, endpoint});
+        // 页面跳转
+        this.$router.push({
+          name: 'User-User',
+          params: {
+            wallet: this.wallet
+          }
+        });
+
       },
     }
   }
